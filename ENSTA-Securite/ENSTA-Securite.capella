@@ -54,7 +54,20 @@
       <ownedRolePkg xsi:type="org.polarsys.capella.core.data.oa:RolePkg" id="8bec89cb-9ab3-473e-be42-3e507f9b7118"
           name="Roles"/>
       <ownedEntityPkg xsi:type="org.polarsys.capella.core.data.oa:EntityPkg" id="31930e9b-ef7f-4191-885f-15af86b4ecdb"
-          name="Operational Entities"/>
+          name="Operational Entities">
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="09d29934-b12a-4365-8df8-dea0e25efefc"
+            name="ENSTA Personnel" abstractType="#8d8443b4-c21b-4bfa-a444-e6698c2995c7"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="4df0639f-bc5a-47aa-b9c9-2c2ba903033a"
+            name="Eleve" abstractType="#4ed43759-47cf-496c-a960-d38f2b44357d"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="06ace5ac-0a05-41bc-b20e-5a32406bf7f3"
+            name="Guigui" abstractType="#3881abeb-148f-48d0-ba58-c0fdeecea1df"/>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="8d8443b4-c21b-4bfa-a444-e6698c2995c7"
+            name="ENSTA Personnel" actor="true" human="true"/>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="4ed43759-47cf-496c-a960-d38f2b44357d"
+            name="Eleve" actor="true" human="true"/>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="3881abeb-148f-48d0-ba58-c0fdeecea1df"
+            name="Guigui" actor="true" human="true"/>
+      </ownedEntityPkg>
     </ownedArchitectures>
     <ownedArchitectures xsi:type="org.polarsys.capella.core.data.ctx:SystemAnalysis"
         id="78de4e53-9ee2-4df0-a85c-8bdf84783b9a" name="System Analysis">
