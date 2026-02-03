@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Capella_Version_7.0.1-->
+<org.polarsys.capella.core.data.capellamodeller:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:libraries="http://www.polarsys.org/capella/common/libraries/7.0.0"
+    xmlns:org.polarsys.capella.core.data.capellacommon="http://www.polarsys.org/capella/core/common/7.0.0"
+    xmlns:org.polarsys.capella.core.data.capellacore="http://www.polarsys.org/capella/core/core/7.0.0"
+    xmlns:org.polarsys.capella.core.data.capellamodeller="http://www.polarsys.org/capella/core/modeller/7.0.0"
+    xmlns:org.polarsys.capella.core.data.cs="http://www.polarsys.org/capella/core/cs/7.0.0"
+    xmlns:org.polarsys.capella.core.data.ctx="http://www.polarsys.org/capella/core/ctx/7.0.0"
+    xmlns:org.polarsys.capella.core.data.epbs="http://www.polarsys.org/capella/core/epbs/7.0.0"
+    xmlns:org.polarsys.capella.core.data.fa="http://www.polarsys.org/capella/core/fa/7.0.0"
+    xmlns:org.polarsys.capella.core.data.information="http://www.polarsys.org/capella/core/information/7.0.0"
+    xmlns:org.polarsys.capella.core.data.information.datatype="http://www.polarsys.org/capella/core/information/datatype/7.0.0"
+    xmlns:org.polarsys.capella.core.data.information.datavalue="http://www.polarsys.org/capella/core/information/datavalue/7.0.0"
+    xmlns:org.polarsys.capella.core.data.interaction="http://www.polarsys.org/capella/core/interaction/7.0.0"
+    xmlns:org.polarsys.capella.core.data.la="http://www.polarsys.org/capella/core/la/7.0.0"
+    xmlns:org.polarsys.capella.core.data.oa="http://www.polarsys.org/capella/core/oa/7.0.0"
+    xmlns:org.polarsys.capella.core.data.pa="http://www.polarsys.org/capella/core/pa/7.0.0"
+    id="a6afe49b-65a6-4369-a114-f56c90b4fad4"
+    name="CampusSurveillanceSystem">
+  <ownedExtensions xsi:type="libraries:ModelInformation" id="ed7fdf46-21ce-46ed-af2f-6836badc4c4e"/>
+  <ownedEnumerationPropertyTypes xsi:type="org.polarsys.capella.core.data.capellacore:EnumerationPropertyType"
+      id="d4cf1d43-f63d-400d-bd7b-65a7d33ac2b1" name="ProgressStatus">
+    <ownedLiterals xsi:type="org.polarsys.capella.core.data.capellacore:EnumerationPropertyLiteral"
+        id="398ef7c6-4e55-4c4b-97ad-fbee8581dc41" name="DRAFT"/>
+    <ownedLiterals xsi:type="org.polarsys.capella.core.data.capellacore:EnumerationPropertyLiteral"
+        id="207b2195-8cfa-476f-8089-a14d46e699be" name="TO_BE_REVIEWED"/>
+    <ownedLiterals xsi:type="org.polarsys.capella.core.data.capellacore:EnumerationPropertyLiteral"
+        id="2a559685-0025-4a56-a7d8-7191cdd7d831" name="TO_BE_DISCUSSED"/>
+    <ownedLiterals xsi:type="org.polarsys.capella.core.data.capellacore:EnumerationPropertyLiteral"
+        id="d0434b43-f5fc-45d4-af17-e55ca5ca86ee" name="REWORK_NECESSARY"/>
+    <ownedLiterals xsi:type="org.polarsys.capella.core.data.capellacore:EnumerationPropertyLiteral"
+        id="d53ae1b9-cd87-4107-8671-e0a37506277d" name="UNDER_REWORK"/>
+    <ownedLiterals xsi:type="org.polarsys.capella.core.data.capellacore:EnumerationPropertyLiteral"
+        id="d6856ecf-c235-4b7b-bfbb-7cf9c079a963" name="REVIEWED_OK"/>
+  </ownedEnumerationPropertyTypes>
+  <keyValuePairs xsi:type="org.polarsys.capella.core.data.capellacore:KeyValue" id="e8d99153-85e5-49ab-ab35-f1e5b6aca8ca"
+      key="projectApproach" value="SingletonComponents"/>
+  <ownedModelRoots xsi:type="org.polarsys.capella.core.data.capellamodeller:SystemEngineering"
+      id="e212d199-4958-4e4a-a3bb-3354b87503c4" name="CampusSurveillanceSystem">
+    <ownedArchitectures xsi:type="org.polarsys.capella.core.data.oa:OperationalAnalysis"
+        id="9206e453-e9b6-4137-8a70-fbf4f7a59c84" name="Operational Analysis">
+      <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalActivityPkg"
+          id="bde939dd-de8f-444a-8438-3c84bd243bb9" name="Operational Activities">
+        <ownedOperationalActivities xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+            id="29dabeea-ed77-43ab-be8b-46981b577d45" name="Root Operational Activity">
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="77b9af3e-64cd-4e58-999c-a3328b2cb32e" name="Define Inspection Policy"
+              summary="Establish inspection objectives, frequency (hourly), and coverage constraints."/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="0e388353-6e91-43b0-941d-fcf4a0d573d6" name="Select Inspection Scenarios"
+              summary="Choose inspection perimeter (student residences, ENSTA + gymnasium, full campus)."/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="11acba81-688d-4a80-a1c9-7c6ad0803695" name="Review Inspection Results"
+              summary="xamine visual information and inspection outcomes."/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="445672ac-7767-4ef0-9f86-080038c4bc77" name="Decide Follow-up Actions"
+              summary="Decide whether further investigation, maintenance, or security response is required.&#xA;&#xA;Operational Interactions"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="a626a9e5-a8fd-441a-b203-6d873a8c0446" name="Supervise Inspection Execution"
+              summary="Oversee ongoing inspections and ensure routes are covered."/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="f31656b7-21a7-4fe1-81e2-40c54f7800e2" name="Monitor Inspection Progress"
+              summary="Track execution status and completion of inspections."/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="062aa0a7-cf20-4035-a935-13e467ff7fbe" name="Analyze Visual Information"
+              summary="Observe and interpret real-time visual data."/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="e39c2930-0b69-4f74-90e7-a63c1d141c9e" name="Identify Objects of Interest"
+              summary="Recognize the presence of objects along inspection routes."/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="35be0e2b-0193-401d-8a0f-eefd438f2446" name="Initiate Response Procedures"
+              summary="Trigger appropriate follow-up actions when needed."/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="8beaaef9-47c3-4d76-b79f-1e0ceae9dd57" name="Carry Out Daily Campus Activities"
+              summary="Use campus facilities and paths during normal operations."/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="1c523acb-331a-40b3-a1e7-eb7101e0d9da" name="Report Observed Anomalies"
+              summary="Inform authorities or security if unusual objects are noticed."/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="b48aadbc-a65e-4349-8eea-2698955a9cc9" name="Monitor Campus Infrastructure Condition"
+              summary="Maintain awareness of campus assets."/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="eaf165d9-d296-4b0a-af3e-a0cd1f505c4c" name="Plan Maintenance or Corrective Actions"
+              summary="Schedule and execute interventions when required."/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="58378fcf-b793-4331-819b-7f6720c13eb2" name="Define Surveillance Regulations"
+              summary="Establish legal and ethical rules for surveillance activities."/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="802a207c-3e91-4415-911b-110b44028d0f" name="Monitor Compliance"
+              summary="Ensure that surveillance practices comply with regulations."/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="d51dc6c4-1409-4c79-9875-73c15514c470" name="Influence Inspection Feasibility"
+              summary="Weather and environmental conditions affect when and how inspections can occur."/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="5c18c907-17cb-49d3-8e56-000b4278c53e" name="Navigate Along Inspection Route"
+              summary="Move autonomously along predefined campus paths and perimeters."/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="29fdb149-8987-4d0c-a0f7-68aaac82ca7d" name="Perform Area Inspection"
+              summary="Carry out inspection of campus surfaces while navigating."/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="e2a11cf4-002d-4ae6-8f51-7a6e6626fcd5" name="Acquire Visual Observations"
+              summary="Obtain visual representations of inspected areas."/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="38c63393-55d9-4310-a50a-ff34c5aced60" name="Report Inspection Status"
+              summary="Provide feedback on inspection progress and completion."/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="432e4a5a-284f-4248-bb7d-db6b7f3ff5c5" name="Signal Detected Objects"
+              summary="Indicate the presence of objects encountered during inspection."/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="c9b27b77-f9ae-4f6e-ad16-11d4d24fb558" name="Inspection policy and frequency"
+              target="#a626a9e5-a8fd-441a-b203-6d873a8c0446" source="#77b9af3e-64cd-4e58-999c-a3328b2cb32e"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="c594fb57-e0ad-426d-8714-10481b933985" name="Selected inspection perimeter and scenario"
+              target="#a626a9e5-a8fd-441a-b203-6d873a8c0446" source="#0e388353-6e91-43b0-941d-fcf4a0d573d6"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="7a8a24b0-2f4b-4b46-bd93-b06a6d394d8b" name="Inspection visuals and observations"
+              target="#11acba81-688d-4a80-a1c9-7c6ad0803695" source="#062aa0a7-cf20-4035-a935-13e467ff7fbe"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="4c7eaa39-195b-4f40-afca-fc49ebcf9d6d" name="Assessment and decision context"
+              target="#445672ac-7767-4ef0-9f86-080038c4bc77" source="#11acba81-688d-4a80-a1c9-7c6ad0803695"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="fe4e75c3-bcf1-4223-9eb3-886c92f6dadc" name="Intervention request"
+              target="#eaf165d9-d296-4b0a-af3e-a0cd1f505c4c" source="#445672ac-7767-4ef0-9f86-080038c4bc77"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="220b22e9-5299-4bdd-9eab-e5f442da5d4d" name="Execution status" target="#f31656b7-21a7-4fe1-81e2-40c54f7800e2"
+              source="#a626a9e5-a8fd-441a-b203-6d873a8c0446"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="bd484a0b-e4f5-4ac4-ad92-b86d10fd8a1b" name="Inspection status information"
+              target="#f31656b7-21a7-4fe1-81e2-40c54f7800e2" source="#38c63393-55d9-4310-a50a-ff34c5aced60"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="0a867431-0672-4c13-bf2f-8b56f863d391" name="Object detection alert"
+              target="#35be0e2b-0193-401d-8a0f-eefd438f2446" source="#432e4a5a-284f-4248-bb7d-db6b7f3ff5c5"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="9951e6e5-7b41-4e7d-84ff-a1a08eafa3c4" name="Selected inspection route and perimeter"
+              target="#5c18c907-17cb-49d3-8e56-000b4278c53e" source="#0e388353-6e91-43b0-941d-fcf4a0d573d6"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="b97470d0-3549-421a-80ec-3d3a8f484363" name="Inspection constraints and frequency"
+              target="#29fdb149-8987-4d0c-a0f7-68aaac82ca7d" source="#77b9af3e-64cd-4e58-999c-a3328b2cb32e"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="e0c99341-110c-45a1-a367-94bf2becabd8" name="Navigation context"
+              target="#29fdb149-8987-4d0c-a0f7-68aaac82ca7d" source="#5c18c907-17cb-49d3-8e56-000b4278c53e"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="1f523578-bd60-46c8-9587-8f3c8618cbb5" name="Observation context"
+              target="#e2a11cf4-002d-4ae6-8f51-7a6e6626fcd5" source="#29fdb149-8987-4d0c-a0f7-68aaac82ca7d"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="ac33fc08-6dce-465b-a62e-a4a9d6e72d1f" name="Visual cues" target="#432e4a5a-284f-4248-bb7d-db6b7f3ff5c5"
+              source="#e2a11cf4-002d-4ae6-8f51-7a6e6626fcd5"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="4fe55349-a050-4a93-8d3c-04fc48f01fc0" name="Execution progress"
+              target="#38c63393-55d9-4310-a50a-ff34c5aced60" source="#29fdb149-8987-4d0c-a0f7-68aaac82ca7d"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="9c849430-851c-4625-a3c2-fa02f6957108" name="Environmental constraints"
+              target="#5c18c907-17cb-49d3-8e56-000b4278c53e" source="#d51dc6c4-1409-4c79-9875-73c15514c470"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="91b2deaf-b87b-4ae7-92c3-395d7c7bfd15" name="Maintenance plan" target="#35be0e2b-0193-401d-8a0f-eefd438f2446"
+              source="#eaf165d9-d296-4b0a-af3e-a0cd1f505c4c"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="4e62aade-5b16-46ac-a3f6-a004c5f3a4af" name="Informal anomaly report"
+              target="#35be0e2b-0193-401d-8a0f-eefd438f2446" source="#1c523acb-331a-40b3-a1e7-eb7101e0d9da"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="4d6d546c-1237-4228-973d-ee8b294f8628" name="Regulatory constraints"
+              target="#77b9af3e-64cd-4e58-999c-a3328b2cb32e" source="#58378fcf-b793-4331-819b-7f6720c13eb2"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="663558f6-b791-4cbe-97af-3616551ab3d1" name="Compliance requirements"
+              target="#11acba81-688d-4a80-a1c9-7c6ad0803695" source="#802a207c-3e91-4415-911b-110b44028d0f"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="2d7e7d50-e152-4ccc-b9a6-71badc6f4d84" name="Environmental context"
+              target="#a626a9e5-a8fd-441a-b203-6d873a8c0446" source="#d51dc6c4-1409-4c79-9875-73c15514c470"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="f4cde729-02a1-4983-b02f-f93342c71e4d" name="Observation context"
+              target="#1c523acb-331a-40b3-a1e7-eb7101e0d9da" source="#8beaaef9-47c3-4d76-b79f-1e0ceae9dd57"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="57b03022-3d92-422f-8a43-59a841110a63" name="Infrastructure condition assessment"
+              target="#eaf165d9-d296-4b0a-af3e-a0cd1f505c4c" source="#b48aadbc-a65e-4349-8eea-2698955a9cc9"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="9167c4bf-71eb-4e24-b7f6-ab80592c31e8" name="Inspection policy" target="#0e388353-6e91-43b0-941d-fcf4a0d573d6"
+              source="#77b9af3e-64cd-4e58-999c-a3328b2cb32e"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="1e49348b-ce68-41cf-9031-a827b1bdba94" name="Envionmental constraints"
+              target="#0e388353-6e91-43b0-941d-fcf4a0d573d6" source="#d51dc6c4-1409-4c79-9875-73c15514c470"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="a1e33f80-c773-4a7e-ade9-b5bcd30ac3dc" name="Inspection results feedback"
+              target="#77b9af3e-64cd-4e58-999c-a3328b2cb32e" source="#11acba81-688d-4a80-a1c9-7c6ad0803695"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="16741e25-1841-4662-a3f0-797e743bae46" name="Inspection information"
+              target="#a626a9e5-a8fd-441a-b203-6d873a8c0446" source="#29fdb149-8987-4d0c-a0f7-68aaac82ca7d"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="fd2acbff-4493-410f-92ba-38524b8b3fba" name="Real-time visual information"
+              target="#062aa0a7-cf20-4035-a935-13e467ff7fbe" source="#a626a9e5-a8fd-441a-b203-6d873a8c0446"/>
+        </ownedOperationalActivities>
+      </ownedFunctionPkg>
+      <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"
+          id="3b6d3474-a149-4164-9ab3-dfbe25220774" name="Operational Capabilities">
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="e640a234-52f5-46bd-9deb-0b6656b3395d" name="Plan Campus Inspections"
+            summary="Ability to define, schedule, and manage inspection routes and frequency across the campus."
+            description="&lt;p>This capability enables ENSTA Campus Authorities to define predefined inspection routes, select inspection perimeters (student residences, ENSTA + gymnasium, full campus), and schedule inspections at an hourly rate, year-round, under nominal environmental conditions.&lt;/p>&#xA;">
+          <ownedFunctionalChains xsi:type="org.polarsys.capella.core.data.oa:OperationalProcess"
+              id="1b500e8e-c7ce-4c81-9486-4e4ad7d83a80" name="Initial Inspection Planning">
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="4901775c-85d9-42f8-95bc-6dbd5bc6d7f4" involved="#77b9af3e-64cd-4e58-999c-a3328b2cb32e"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="21bf43f3-a80d-4e2b-8b82-1421c7336797" involved="#58378fcf-b793-4331-819b-7f6720c13eb2"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="fda0d5dc-5195-4723-8772-137763151ccc" involved="#4d6d546c-1237-4228-973d-ee8b294f8628"
+                source="#21bf43f3-a80d-4e2b-8b82-1421c7336797" target="#4901775c-85d9-42f8-95bc-6dbd5bc6d7f4"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="8a6110da-ab12-442a-902f-e0fae00c422b" involved="#0e388353-6e91-43b0-941d-fcf4a0d573d6"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="bca4bccf-18ef-4b40-8d16-fee9af5a7f34" involved="#9167c4bf-71eb-4e24-b7f6-ab80592c31e8"
+                source="#4901775c-85d9-42f8-95bc-6dbd5bc6d7f4" target="#8a6110da-ab12-442a-902f-e0fae00c422b"/>
+          </ownedFunctionalChains>
+          <ownedFunctionalChains xsi:type="org.polarsys.capella.core.data.oa:OperationalProcess"
+              id="1290aa66-578c-4cd4-ae3a-c33dc44f4284" name="Scenario Selection Based on Context">
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="568bc7e6-1231-4654-bafc-03e1b8c6ddfd" involved="#d51dc6c4-1409-4c79-9875-73c15514c470"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="6bcc8942-ff97-47dc-8566-374ff9950ab2" involved="#0e388353-6e91-43b0-941d-fcf4a0d573d6"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="9d6a60d8-9a3f-41da-8198-0cd9b3b5571d" involved="#1e49348b-ce68-41cf-9031-a827b1bdba94"
+                source="#568bc7e6-1231-4654-bafc-03e1b8c6ddfd" target="#6bcc8942-ff97-47dc-8566-374ff9950ab2"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="96991ad6-038b-4cad-be92-e31e5c6b0b31" involved="#77b9af3e-64cd-4e58-999c-a3328b2cb32e"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="f3f26703-1bb0-4163-9d53-b4c70c3fa36d" involved="#9167c4bf-71eb-4e24-b7f6-ab80592c31e8"
+                source="#96991ad6-038b-4cad-be92-e31e5c6b0b31" target="#6bcc8942-ff97-47dc-8566-374ff9950ab2"/>
+          </ownedFunctionalChains>
+          <ownedFunctionalChains xsi:type="org.polarsys.capella.core.data.oa:OperationalProcess"
+              id="5ffbecc7-e235-41ef-89de-01d3a84416e7" name="Planning Update After Inspection">
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="24053501-8696-4a7d-918c-12614f98f1f7" involved="#11acba81-688d-4a80-a1c9-7c6ad0803695"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="80fcfb3a-43d8-4472-bb70-c85fbf0bdfa7" involved="#77b9af3e-64cd-4e58-999c-a3328b2cb32e"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="1c34ca8f-ed1c-40fa-9626-fa5e059baa37" involved="#a1e33f80-c773-4a7e-ade9-b5bcd30ac3dc"
+                source="#24053501-8696-4a7d-918c-12614f98f1f7" target="#80fcfb3a-43d8-4472-bb70-c85fbf0bdfa7"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="91eb0d3c-3278-4340-8c6e-b002d5a166b3" involved="#0e388353-6e91-43b0-941d-fcf4a0d573d6"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="d95a999a-8d1b-4fc1-89e2-5c580e838a88" involved="#9167c4bf-71eb-4e24-b7f6-ab80592c31e8"
+                source="#80fcfb3a-43d8-4472-bb70-c85fbf0bdfa7" target="#91eb0d3c-3278-4340-8c6e-b002d5a166b3"/>
+          </ownedFunctionalChains>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="cc636e2c-d499-4908-8d0c-193463387c43" name="Perform Campus Area Inspection"
+            summary="Ability to carry out inspections along predefined campus routes."
+            description="&lt;p>This capability represents the execution of inspection activities over campus surfaces and perimeters, ensuring coverage of all required areas according to the selected scenario and respecting nominal weather conditions.&lt;/p>&#xA;">
+          <ownedFunctionalChains xsi:type="org.polarsys.capella.core.data.oa:OperationalProcess"
+              id="8087fb92-f4c6-45a4-ac99-ffd9402c937e" name="Execute Planned Inspection">
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="d7dbc229-c991-4255-b5d6-d8fcee465e74" involved="#0e388353-6e91-43b0-941d-fcf4a0d573d6"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="15a09889-86c8-4b98-8c01-e91fe56853fa" involved="#5c18c907-17cb-49d3-8e56-000b4278c53e"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="b120d7d0-d025-48cb-b496-04e58e98476c" involved="#9951e6e5-7b41-4e7d-84ff-a1a08eafa3c4"
+                source="#d7dbc229-c991-4255-b5d6-d8fcee465e74" target="#15a09889-86c8-4b98-8c01-e91fe56853fa"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="e6b8e390-d303-454f-be87-af7c14bf8dd6" involved="#29fdb149-8987-4d0c-a0f7-68aaac82ca7d"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="0b62f8a7-8487-467a-8401-34b8196bed37" involved="#e0c99341-110c-45a1-a367-94bf2becabd8"
+                source="#15a09889-86c8-4b98-8c01-e91fe56853fa" target="#e6b8e390-d303-454f-be87-af7c14bf8dd6"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="adc6812d-cb80-4b5d-a41f-cd656c840e20" involved="#38c63393-55d9-4310-a50a-ff34c5aced60"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="678f9b42-f8b9-4c0a-b5fb-bf21d409c0de" involved="#4fe55349-a050-4a93-8d3c-04fc48f01fc0"
+                source="#e6b8e390-d303-454f-be87-af7c14bf8dd6" target="#adc6812d-cb80-4b5d-a41f-cd656c840e20"/>
+          </ownedFunctionalChains>
+          <ownedFunctionalChains xsi:type="org.polarsys.capella.core.data.oa:OperationalProcess"
+              id="df76e6d7-c1ed-4815-a1df-2ec0a0d9d8fc" name="Supervised Inspection Execution">
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="86edfc31-702a-4483-aa4c-b4b3a604d8e7" involved="#29fdb149-8987-4d0c-a0f7-68aaac82ca7d"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="fe78dae8-199e-4d9d-8b4d-6737a639b8b9" involved="#a626a9e5-a8fd-441a-b203-6d873a8c0446"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="9956f865-5962-4bba-96e7-b1de2a1dba3b" involved="#16741e25-1841-4662-a3f0-797e743bae46"
+                source="#86edfc31-702a-4483-aa4c-b4b3a604d8e7" target="#fe78dae8-199e-4d9d-8b4d-6737a639b8b9"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="3798fc8d-ee3a-48c0-b0f2-309acb4209e0" involved="#f31656b7-21a7-4fe1-81e2-40c54f7800e2"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="4a3b7319-dd57-421d-bdff-45c42d4d4b9b" involved="#220b22e9-5299-4bdd-9eab-e5f442da5d4d"
+                source="#fe78dae8-199e-4d9d-8b4d-6737a639b8b9" target="#3798fc8d-ee3a-48c0-b0f2-309acb4209e0"/>
+          </ownedFunctionalChains>
+          <ownedFunctionalChains xsi:type="org.polarsys.capella.core.data.oa:OperationalProcess"
+              id="1bbce175-eba2-4893-b123-9e300008591a" name="Continuous Inspection Cycle">
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="e91ade91-cc6a-4acb-b011-08dce2be2381" involved="#29fdb149-8987-4d0c-a0f7-68aaac82ca7d"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="bb0887b7-7749-46e7-be5c-b963f5b52c96" involved="#a626a9e5-a8fd-441a-b203-6d873a8c0446"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="4d467673-85ed-406e-aff1-4f2aad627dbb" involved="#16741e25-1841-4662-a3f0-797e743bae46"
+                source="#e91ade91-cc6a-4acb-b011-08dce2be2381" target="#bb0887b7-7749-46e7-be5c-b963f5b52c96"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="7771c831-0b0f-4aa9-8041-e259ff589ad9" involved="#062aa0a7-cf20-4035-a935-13e467ff7fbe"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="1e943c18-a49c-42e5-a31a-59e41d84a210" involved="#fd2acbff-4493-410f-92ba-38524b8b3fba"
+                source="#bb0887b7-7749-46e7-be5c-b963f5b52c96" target="#7771c831-0b0f-4aa9-8041-e259ff589ad9"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="22bed54f-adca-4b67-9155-05d6f4f0faf7" involved="#11acba81-688d-4a80-a1c9-7c6ad0803695"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="b99cde42-7c65-48f4-912b-4bc58132f101" involved="#7a8a24b0-2f4b-4b46-bd93-b06a6d394d8b"
+                source="#7771c831-0b0f-4aa9-8041-e259ff589ad9" target="#22bed54f-adca-4b67-9155-05d6f4f0faf7"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="64f9f02d-6d57-4162-b360-611478abeebe" involved="#77b9af3e-64cd-4e58-999c-a3328b2cb32e"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="a5277d51-d746-4895-992a-37b08ff7fb1a" involved="#a1e33f80-c773-4a7e-ade9-b5bcd30ac3dc"
+                source="#22bed54f-adca-4b67-9155-05d6f4f0faf7" target="#64f9f02d-6d57-4162-b360-611478abeebe"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="bc0d53ef-e365-4c0c-aba0-60c6ac814402" involved="#0e388353-6e91-43b0-941d-fcf4a0d573d6"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="d87ff3fb-c432-4e49-a64c-9e7e15598ecc" involved="#9167c4bf-71eb-4e24-b7f6-ab80592c31e8"
+                source="#64f9f02d-6d57-4162-b360-611478abeebe" target="#bc0d53ef-e365-4c0c-aba0-60c6ac814402"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="d429732b-7b06-4384-b909-f58ac0e3a25d" involved="#5c18c907-17cb-49d3-8e56-000b4278c53e"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="895de552-48de-4b77-bb66-d0417cf8da2a" involved="#9951e6e5-7b41-4e7d-84ff-a1a08eafa3c4"
+                source="#bc0d53ef-e365-4c0c-aba0-60c6ac814402" target="#d429732b-7b06-4384-b909-f58ac0e3a25d"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="7484817c-b471-48f1-844b-629de5149bd9" involved="#29fdb149-8987-4d0c-a0f7-68aaac82ca7d"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="c64f137c-90b6-439e-9e93-8a10b355a152" involved="#e0c99341-110c-45a1-a367-94bf2becabd8"
+                source="#d429732b-7b06-4384-b909-f58ac0e3a25d" target="#7484817c-b471-48f1-844b-629de5149bd9"/>
+          </ownedFunctionalChains>
+          <includes xsi:type="org.polarsys.capella.core.data.interaction:AbstractCapabilityInclude"
+              id="92d9ea72-77ab-4606-9adf-21497d2f5ad8" included="#b14b7c7a-5090-4a6c-be21-09b3fc40a1c8"/>
+          <includes xsi:type="org.polarsys.capella.core.data.interaction:AbstractCapabilityInclude"
+              id="637d1f8e-9156-4381-a16e-4abf229cc8e5" included="#67079094-0b12-4c1f-8d74-c2e357e08f99"/>
+          <includes xsi:type="org.polarsys.capella.core.data.interaction:AbstractCapabilityInclude"
+              id="411ab354-8311-4869-bd9c-72161ca81223" included="#0e858c93-69ca-43fd-99e7-1f923ec080ba"/>
+          <includes xsi:type="org.polarsys.capella.core.data.interaction:AbstractCapabilityInclude"
+              id="eb97ddb6-783d-43d0-94e0-6a5e3be1e52a" included="#ec10d3fe-7909-4501-9818-b8256257229e"/>
+          <includes xsi:type="org.polarsys.capella.core.data.interaction:AbstractCapabilityInclude"
+              id="26dea911-b225-40c6-b102-e0737891674b" included="#e640a234-52f5-46bd-9deb-0b6656b3395d"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="29ad17b1-1c94-463e-8754-f962f6beade3" involved="#de363bd5-ae75-435e-acc7-fe047a7a869e"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="39c8a740-4ed4-48e9-99a2-dc307e4d8e0c" involved="#e9745cfc-3c09-49fe-b566-2f75f8dd6e7b"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="9fd814f3-c46a-46f4-8eb7-248095ad61bf" involved="#5f61b172-fde7-442a-a4f7-101809745bc1"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="adccb42f-4609-437e-ba8e-9b94621731da" involved="#1a6e3e4d-3872-4aac-b53c-e15d2a3e3a0e"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="12fa6509-b221-4d8c-ba24-c8bc3f825611" involved="#717ac4ba-a966-4162-a8de-0600e8b849e0"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="f8c9bff8-a6b3-440c-aac6-369edc08d7ad" involved="#b22521e5-ff9d-420a-8ec5-8af67b0c6651"/>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="67079094-0b12-4c1f-8d74-c2e357e08f99" name="Detect Presence of Objects"
+            summary="Ability to identify the presence of objects within inspected areas."
+            description="&lt;p>This capability allows security operations to become aware of objects located along inspection routes, without presupposing the nature, threat level, or classification of those objects.&lt;/p>&#xA;"/>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="b14b7c7a-5090-4a6c-be21-09b3fc40a1c8" name="Acquire Visual Information"
+            summary="Ability to obtain visual representations of inspected areas."
+            description="&lt;p>This capability ensures that visual information of inspected campus zones is obtained during inspections, enabling situational awareness for security operators and authorities.&lt;/p>&#xA;"/>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="7a1ea14f-b30d-4771-825b-e4da8a4e6d38" name="Provide Real-Time Visual Access"
+            summary="Ability to access inspection visuals in real time." description="&lt;p>This capability allows Campus Security Operators and ENSTA Authorities to view visual information during the inspection process, supporting timely assessment and decision-making.&lt;/p>&#xA;">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="ed5e7b92-0ba7-4b05-b12f-3227d01327f2" involved="#de363bd5-ae75-435e-acc7-fe047a7a869e"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="2555ca4a-5ae8-4a67-9cdd-c3ee62bb7f65" involved="#e9745cfc-3c09-49fe-b566-2f75f8dd6e7b"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="4473e837-7d7e-4fbd-9d2d-a061d7a75f2b" involved="#4a442d24-511f-4cf5-b4fd-e16374f067e5"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="8fde760c-07ce-4d37-8ea2-2668855bfb6a" involved="#b22521e5-ff9d-420a-8ec5-8af67b0c6651"/>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="0e858c93-69ca-43fd-99e7-1f923ec080ba" name="Monitor Inspection Execution"
+            summary="Ability to supervise ongoing inspection activities."/>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="af0512ad-a23c-415c-b7cf-762f09110f6a" name="Respond to Detected Objects"
+            summary="Ability to initiate follow-up actions when objects are detected."
+            description="&lt;p>This capability allows security operators and infrastructure management to analyze detected objects and decide on appropriate responses, such as further investigation or maintenance intervention.&lt;/p>&#xA;">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="a5c7753d-5504-4aef-93d5-91261d099abb" involved="#e9745cfc-3c09-49fe-b566-2f75f8dd6e7b"/>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="ec10d3fe-7909-4501-9818-b8256257229e" name="Operate Under Nominal Environmental Conditions"
+            summary="Ability to conduct inspections under typical Palaiseau weather conditions."
+            description="&lt;p>This capability ensures that inspection activities remain feasible and continuous under nominal environmental conditions, as defined in the system constraints.&lt;/p>&#xA;"/>
+      </ownedAbstractCapabilityPkg>
+      <ownedInterfacePkg xsi:type="org.polarsys.capella.core.data.cs:InterfacePkg"
+          id="da624f39-cf47-4c53-b7a4-b43e037bc35a" name="Interfaces"/>
+      <ownedDataPkg xsi:type="org.polarsys.capella.core.data.information:DataPkg"
+          id="89da22fb-2d8a-4086-bde1-d11ef25742d4" name="Data"/>
+      <ownedRolePkg xsi:type="org.polarsys.capella.core.data.oa:RolePkg" id="26d13012-49c4-41ca-9253-80eb5bee9fd1"
+          name="Roles"/>
+      <ownedEntityPkg xsi:type="org.polarsys.capella.core.data.oa:EntityPkg" id="ab6a07fd-56e2-402c-9ba7-2c9d48ac60bc"
+          name="Operational Entities">
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="84a25220-af51-4eda-8521-f88987262875"
+            name="ENSTA Campus Authorities" abstractType="#de363bd5-ae75-435e-acc7-fe047a7a869e"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="1c440080-4033-48ff-a773-cd946479de55"
+            name="Campus Security Operators" abstractType="#e9745cfc-3c09-49fe-b566-2f75f8dd6e7b"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="74afe16a-e93a-4ef1-b61b-5a4029fcb9d5"
+            name="Campus Occupants (Students, Staff, Visitors)" abstractType="#717ac4ba-a966-4162-a8de-0600e8b849e0"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="58cd9845-4b0d-4bce-8acc-808b4ee23aff"
+            name="Campus Infrastructure Management" abstractType="#5f61b172-fde7-442a-a4f7-101809745bc1"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="78e382d4-610a-421c-93cf-8e34197f5d82"
+            name="Regulatory and Legal Authorities" abstractType="#4a442d24-511f-4cf5-b4fd-e16374f067e5"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="25bb41d0-5db5-4252-b475-7e4faacbd9ec"
+            name="Campus Environmental Conditions" abstractType="#1a6e3e4d-3872-4aac-b53c-e15d2a3e3a0e"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="50ae0b5d-f40f-4d54-aad2-b3c1a034ee01"
+            name="Autonomous Mobile Robot" abstractType="#b22521e5-ff9d-420a-8ec5-8af67b0c6651"/>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="de363bd5-ae75-435e-acc7-fe047a7a869e"
+            name="ENSTA Campus Authorities" summary="Entity responsible for defining campus surveillance objectives and inspection policies."
+            description="&lt;p>Defines inspection perimeters, inspection frequency (hourly, year-round), acceptable operating conditions, and uses inspection outcomes to support safety-related decisions on campus.&lt;/p>&#xA;">
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="e2fe60e1-317b-4603-81ea-c762c3815e60" targetElement="#77b9af3e-64cd-4e58-999c-a3328b2cb32e"
+              sourceElement="#de363bd5-ae75-435e-acc7-fe047a7a869e"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="f386b000-cd43-4068-9616-8acf3d4ae72f" targetElement="#0e388353-6e91-43b0-941d-fcf4a0d573d6"
+              sourceElement="#de363bd5-ae75-435e-acc7-fe047a7a869e"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="23f3b594-989c-478b-83b7-c335d0c1e36a" targetElement="#11acba81-688d-4a80-a1c9-7c6ad0803695"
+              sourceElement="#de363bd5-ae75-435e-acc7-fe047a7a869e"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="acc27c38-0dff-4f4d-8c63-71a9823535b9" targetElement="#445672ac-7767-4ef0-9f86-080038c4bc77"
+              sourceElement="#de363bd5-ae75-435e-acc7-fe047a7a869e"/>
+        </ownedEntities>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="e9745cfc-3c09-49fe-b566-2f75f8dd6e7b"
+            name="Campus Security Operators" summary="Personnel in charge of supervising campus inspections and reacting to inspection results."
+            description="&lt;p>Monitor inspection activities, analyze real-time visual information, identify suspicious objects or situations, and initiate appropriate responses or escalation procedures.&lt;/p>&#xA;"
+            actor="true" human="true">
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="3c1bfea6-4863-4509-b339-21307eabd9d9" targetElement="#a626a9e5-a8fd-441a-b203-6d873a8c0446"
+              sourceElement="#e9745cfc-3c09-49fe-b566-2f75f8dd6e7b"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="ce6f275b-b976-446d-8e46-db9b053106d9" targetElement="#f31656b7-21a7-4fe1-81e2-40c54f7800e2"
+              sourceElement="#e9745cfc-3c09-49fe-b566-2f75f8dd6e7b"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="6da809d0-15ef-409f-9e4f-de04af6c1f0c" targetElement="#062aa0a7-cf20-4035-a935-13e467ff7fbe"
+              sourceElement="#e9745cfc-3c09-49fe-b566-2f75f8dd6e7b"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="c5a76670-e2fa-4ce8-8563-d92a162baa7c" targetElement="#e39c2930-0b69-4f74-90e7-a63c1d141c9e"
+              sourceElement="#e9745cfc-3c09-49fe-b566-2f75f8dd6e7b"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="b6fab40e-8f8c-4a79-9c66-38cf76ced72b" targetElement="#35be0e2b-0193-401d-8a0f-eefd438f2446"
+              sourceElement="#e9745cfc-3c09-49fe-b566-2f75f8dd6e7b"/>
+        </ownedEntities>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="717ac4ba-a966-4162-a8de-0600e8b849e0"
+            name="Campus Occupants (Students, Staff, Visitors)" summary="People present on campus and indirectly affected by surveillance activities."
+            description="&lt;p>Carry out their daily activities within inspected areas; benefit from improved safety but may be subject to surveillance-related constraints such as privacy considerations or temporary access limitations.&lt;/p>&#xA;"
+            actor="true" human="true">
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="b6f075d5-deef-46fa-a814-28289113723f" targetElement="#8beaaef9-47c3-4d76-b79f-1e0ceae9dd57"
+              sourceElement="#717ac4ba-a966-4162-a8de-0600e8b849e0"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="a1740e54-3a19-4f10-a093-4429cd5979e3" targetElement="#1c523acb-331a-40b3-a1e7-eb7101e0d9da"
+              sourceElement="#717ac4ba-a966-4162-a8de-0600e8b849e0"/>
+        </ownedEntities>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="5f61b172-fde7-442a-a4f7-101809745bc1"
+            name="Campus Infrastructure Management" summary="Entity responsible for maintaining campus physical assets and outdoor areas."
+            description="&lt;p>Uses inspection results to detect anomalies on paths, buildings, and outdoor surfaces; plans and executes maintenance or corrective actions when objects or issues are detected.&lt;/p>&#xA;">
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="0e13e384-e4a1-4799-bbaf-b2d4ba678339" targetElement="#b48aadbc-a65e-4349-8eea-2698955a9cc9"
+              sourceElement="#5f61b172-fde7-442a-a4f7-101809745bc1"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="21db8466-4a68-4007-9295-232f9bbeb6d0" targetElement="#eaf165d9-d296-4b0a-af3e-a0cd1f505c4c"
+              sourceElement="#5f61b172-fde7-442a-a4f7-101809745bc1"/>
+        </ownedEntities>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="4a442d24-511f-4cf5-b4fd-e16374f067e5"
+            name="Regulatory and Legal Authorities" summary="External authorities defining rules and constraints related to surveillance and data usage."
+            description="&lt;p>Establish legal, regulatory, and ethical constraints applicable to surveillance activities, including privacy protection, data retention, and acceptable inspection practices.&lt;/p>&#xA;">
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="c041ce31-1e0b-4ebe-8af9-5330de10bb17" targetElement="#58378fcf-b793-4331-819b-7f6720c13eb2"
+              sourceElement="#4a442d24-511f-4cf5-b4fd-e16374f067e5"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="5084522c-2dca-456d-bb82-512e871017f1" targetElement="#802a207c-3e91-4415-911b-110b44028d0f"
+              sourceElement="#4a442d24-511f-4cf5-b4fd-e16374f067e5"/>
+        </ownedEntities>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="1a6e3e4d-3872-4aac-b53c-e15d2a3e3a0e"
+            name="Campus Environmental Conditions" summary="Natural environmental context influencing inspection activities."
+            description="&lt;p>Represents weather and environmental conditions typical of Palaiseau that constrain or enable inspection activities (nominal vs non-nominal conditions).&lt;/p>&#xA;">
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="7194d247-88cc-4024-8759-1a3fe40eb93d" targetElement="#d51dc6c4-1409-4c79-9875-73c15514c470"
+              sourceElement="#1a6e3e4d-3872-4aac-b53c-e15d2a3e3a0e"/>
+        </ownedEntities>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="b22521e5-ff9d-420a-8ec5-8af67b0c6651"
+            name="Autonomous Mobile Robot" summary="Autonomous operational entity capable of moving along predefined campus routes and performing inspection-related activities."
+            description="&lt;p>The Autonomous Mobile Robot is an operational entity that autonomously navigates campus areas to carry out inspection activities according to predefined routes and schedules. It operates under nominal environmental conditions and provides operational feedback to human stakeholders during inspection missions. Its internal technical implementation is outside the scope of Operational Analysis.&lt;/p>&#xA;">
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="fe3890d3-0df3-4abf-8a9d-468f95c4307d" targetElement="#5c18c907-17cb-49d3-8e56-000b4278c53e"
+              sourceElement="#b22521e5-ff9d-420a-8ec5-8af67b0c6651"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="b00cf3c0-e746-4f0a-9f5a-83c98638cae3" targetElement="#29fdb149-8987-4d0c-a0f7-68aaac82ca7d"
+              sourceElement="#b22521e5-ff9d-420a-8ec5-8af67b0c6651"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="83f2a26a-bc4e-42e3-b5ec-9e6c512ad637" targetElement="#e2a11cf4-002d-4ae6-8f51-7a6e6626fcd5"
+              sourceElement="#b22521e5-ff9d-420a-8ec5-8af67b0c6651"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="77640626-3aa2-4094-88f5-38d14675fbd1" targetElement="#38c63393-55d9-4310-a50a-ff34c5aced60"
+              sourceElement="#b22521e5-ff9d-420a-8ec5-8af67b0c6651"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="0e1997a0-2c6c-4c41-ae9c-6e9e10c35f57" targetElement="#432e4a5a-284f-4248-bb7d-db6b7f3ff5c5"
+              sourceElement="#b22521e5-ff9d-420a-8ec5-8af67b0c6651"/>
+        </ownedEntities>
+      </ownedEntityPkg>
+    </ownedArchitectures>
+    <ownedArchitectures xsi:type="org.polarsys.capella.core.data.ctx:SystemAnalysis"
+        id="3d5552ac-3513-4935-a5d0-b97047361708" name="System Analysis">
+      <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.ctx:SystemFunctionPkg"
+          id="5b1f27eb-c822-49ea-a7dd-fecc6b67b278" name="System Functions">
+        <ownedSystemFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+            id="7a3e786e-a5c0-4477-b275-2a2174fce8d7" name="Root System Function">
+          <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+              id="d56de3ee-acb1-4a06-a999-0ee459df909f" targetElement="#29dabeea-ed77-43ab-be8b-46981b577d45"
+              sourceElement="#7a3e786e-a5c0-4477-b275-2a2174fce8d7"/>
+        </ownedSystemFunctions>
+      </ownedFunctionPkg>
+      <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.ctx:CapabilityPkg"
+          id="7635beff-f9ec-4f7f-ba00-8f89b92fdcb2" name="Capabilities"/>
+      <ownedInterfacePkg xsi:type="org.polarsys.capella.core.data.cs:InterfacePkg"
+          id="a6a974ca-55fe-40c5-b8e2-7a0d1b4bd8c2" name="Interfaces"/>
+      <ownedDataPkg xsi:type="org.polarsys.capella.core.data.information:DataPkg"
+          id="8038d081-cb3c-473e-81e4-df924fd51eb2" name="Data">
+        <ownedDataPkgs xsi:type="org.polarsys.capella.core.data.information:DataPkg"
+            id="8e93ba8d-2799-4f98-8535-eb77f5a6ec40" name="Predefined Types">
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:BooleanType"
+              id="ebcad3f7-b760-4e7c-bd8a-1c758f70ce00" name="Boolean" visibility="PUBLIC">
+            <ownedLiterals xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralBooleanValue"
+                id="6a22b826-242f-4272-b777-beb022fb86aa" name="True" abstractType="#ebcad3f7-b760-4e7c-bd8a-1c758f70ce00"
+                value="true"/>
+            <ownedLiterals xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralBooleanValue"
+                id="277c3f85-d8b0-4ccf-a2e4-3a5b95db687b" name="False" abstractType="#ebcad3f7-b760-4e7c-bd8a-1c758f70ce00"/>
+          </ownedDataTypes>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="e296587e-31f3-44dd-bda8-a6cf9406e614" name="Byte" visibility="PUBLIC">
+            <ownedMinValue xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                id="dcd0d94b-01ce-4aeb-a84b-eac35b9de712" name="" abstractType="#e296587e-31f3-44dd-bda8-a6cf9406e614"
+                value="0"/>
+            <ownedMaxValue xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                id="abc88b81-6d17-4c92-a087-460fa8864d07" name="" abstractType="#e296587e-31f3-44dd-bda8-a6cf9406e614"
+                value="255"/>
+          </ownedDataTypes>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:StringType"
+              id="8115afbc-955c-4670-84f3-5e6ee61a36e3" name="Char" visibility="PUBLIC">
+            <ownedMinLength xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                id="1451a081-8a97-4321-b55c-4043ac166f11" name="" abstractType="#e8f9bbac-afcf-4a27-8400-10c8f5423faa"
+                value="1"/>
+            <ownedMaxLength xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                id="e6d71466-b544-4d87-bf5a-f72261db1114" name="" abstractType="#e8f9bbac-afcf-4a27-8400-10c8f5423faa"
+                value="1"/>
+          </ownedDataTypes>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="b7ce5d28-77dc-4bc6-af77-89901d298538" name="Double" discrete="false"
+              visibility="PUBLIC" kind="FLOAT"/>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="03a4e998-a903-486d-bddb-1fe922e957d2" name="Float" discrete="false"
+              visibility="PUBLIC" kind="FLOAT"/>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="5210953f-c1b0-4466-9cf3-dfc9d4a302ff" name="Hexadecimal" visibility="PUBLIC">
+            <ownedMinValue xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                id="4d65a2b6-2e62-487f-9fc0-bb1a1be68592" name="" abstractType="#5210953f-c1b0-4466-9cf3-dfc9d4a302ff"
+                value="0"/>
+            <ownedMaxValue xsi:type="org.polarsys.capella.core.data.information.datavalue:BinaryExpression"
+                id="464465c6-7565-4387-808b-f6fef9fb7085" abstractType="#5210953f-c1b0-4466-9cf3-dfc9d4a302ff"
+                operator="SUB">
+              <ownedLeftOperand xsi:type="org.polarsys.capella.core.data.information.datavalue:BinaryExpression"
+                  id="80b3cb68-dc3a-4078-84d2-516ab56b6f6f" operator="POW">
+                <ownedLeftOperand xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                    id="2128e632-ea2b-45f1-9995-4de6646ed2f9" value="2"/>
+                <ownedRightOperand xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                    id="8365a14c-b400-42e6-b1c1-40185671a1a6" value="64"/>
+              </ownedLeftOperand>
+              <ownedRightOperand xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                  id="41b0e322-3805-4f04-a584-26f1ba9395f0" value="1"/>
+            </ownedMaxValue>
+          </ownedDataTypes>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="1c9c064b-46a3-4928-b1e7-d661fb317c05" name="Integer" visibility="PUBLIC"/>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="80a22459-109f-45eb-8842-bd372cd36b5a" name="Long" visibility="PUBLIC"/>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="54af95c7-b0f3-4532-861e-cc5798a50c49" name="LongLong" visibility="PUBLIC"/>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="108da6e2-e3e0-4735-b353-301b93a45bde" name="Short" visibility="PUBLIC"/>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:StringType"
+              id="32a22c02-2d1d-469f-ac86-cab737f3ebf5" name="String" visibility="PUBLIC"/>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="d0dcd051-ab34-445c-bf4c-a2f86fdf734e" name="UnsignedInteger" maxInclusive="false"
+              visibility="PUBLIC">
+            <ownedMinValue xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                id="c367a5e3-9332-4d1d-9c6a-c7138a1945a1" name="" abstractType="#d0dcd051-ab34-445c-bf4c-a2f86fdf734e"
+                value="0"/>
+          </ownedDataTypes>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="e8f9bbac-afcf-4a27-8400-10c8f5423faa" name="UnsignedShort" maxInclusive="false"
+              visibility="PUBLIC">
+            <ownedMinValue xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                id="302532df-63ff-46c8-825a-8f8662ded026" name="" abstractType="#e8f9bbac-afcf-4a27-8400-10c8f5423faa"
+                value="0"/>
+          </ownedDataTypes>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="22a0f2c0-e48e-48fc-ae58-d5d3922ab32b" name="UnsignedLong" maxInclusive="false"
+              visibility="PUBLIC">
+            <ownedMinValue xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                id="110ce6b5-cf1e-4aa4-8aba-5c6bf9ce7ab2" name="" abstractType="#22a0f2c0-e48e-48fc-ae58-d5d3922ab32b"
+                value="0"/>
+          </ownedDataTypes>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="c18d28a0-6024-43b4-bdd2-45d8b211e77a" name="UnsignedLongLong" maxInclusive="false"
+              visibility="PUBLIC">
+            <ownedMinValue xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                id="b4a70f4c-56a1-45c7-bd4f-221355780db1" name="" abstractType="#c18d28a0-6024-43b4-bdd2-45d8b211e77a"
+                value="0"/>
+          </ownedDataTypes>
+        </ownedDataPkgs>
+      </ownedDataPkg>
+      <ownedSystemComponentPkg xsi:type="org.polarsys.capella.core.data.ctx:SystemComponentPkg"
+          id="cb4197e2-6c29-493e-a1e1-f8f40b57e56f" name="Structure">
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="6d4cbb9c-d151-4887-901e-cde859299b30"
+            name="System" abstractType="#3487935d-7b07-4e19-a39f-495a2af01460"/>
+        <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
+            id="3487935d-7b07-4e19-a39f-495a2af01460" name="System">
+          <ownedStateMachines xsi:type="org.polarsys.capella.core.data.capellacommon:StateMachine"
+              id="cd16127b-f9a8-43b2-ac42-ab792957b9ff" name="System State Machine">
+            <ownedRegions xsi:type="org.polarsys.capella.core.data.capellacommon:Region"
+                id="dfefc67f-2cc0-4fe1-8816-14a69c0b69e9" name="Default Region"/>
+          </ownedStateMachines>
+        </ownedSystemComponents>
+      </ownedSystemComponentPkg>
+      <ownedMissionPkg xsi:type="org.polarsys.capella.core.data.ctx:MissionPkg" id="29e51bd7-6fb5-45e9-b158-010ff4aa6857"
+          name="Missions">
+        <ownedMissions xsi:type="org.polarsys.capella.core.data.ctx:Mission" id="9bb3c789-d29d-4369-b4ae-83567ded4de0"
+            name="Mission 1">
+          <ownedMissionInvolvements xsi:type="org.polarsys.capella.core.data.ctx:MissionInvolvement"
+              id="85202b45-1b47-44da-b6f2-79035181bf96" involved="#3487935d-7b07-4e19-a39f-495a2af01460"/>
+        </ownedMissions>
+      </ownedMissionPkg>
+      <ownedOperationalAnalysisRealizations xsi:type="org.polarsys.capella.core.data.ctx:OperationalAnalysisRealization"
+          id="423da4f2-8952-40f2-aa77-3adb2c5315e0" targetElement="#9206e453-e9b6-4137-8a70-fbf4f7a59c84"
+          sourceElement="#3d5552ac-3513-4935-a5d0-b97047361708"/>
+    </ownedArchitectures>
+    <ownedArchitectures xsi:type="org.polarsys.capella.core.data.la:LogicalArchitecture"
+        id="dedf431f-7ad4-4304-971a-6fb73e915fc5" name="Logical Architecture">
+      <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.la:LogicalFunctionPkg"
+          id="13fd937c-73cb-4905-84a6-6c9b60f6d9e4" name="Logical Functions">
+        <ownedLogicalFunctions xsi:type="org.polarsys.capella.core.data.la:LogicalFunction"
+            id="c91aad32-1ac4-490f-a960-1af1f7e7e8ad" name="Root Logical Function">
+          <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+              id="187e6bda-c08f-4d57-8135-00aaeb380db9" targetElement="#7a3e786e-a5c0-4477-b275-2a2174fce8d7"
+              sourceElement="#c91aad32-1ac4-490f-a960-1af1f7e7e8ad"/>
+        </ownedLogicalFunctions>
+      </ownedFunctionPkg>
+      <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.la:CapabilityRealizationPkg"
+          id="b7cb521e-d550-4642-9359-9de5cfbb5cf7" name="Capabilities"/>
+      <ownedInterfacePkg xsi:type="org.polarsys.capella.core.data.cs:InterfacePkg"
+          id="2bbdf936-64ab-48e8-bd6f-c2a2db414509" name="Interfaces"/>
+      <ownedDataPkg xsi:type="org.polarsys.capella.core.data.information:DataPkg"
+          id="83b648a0-5a14-4b13-bc13-0816233514a7" name="Data"/>
+      <ownedLogicalComponentPkg xsi:type="org.polarsys.capella.core.data.la:LogicalComponentPkg"
+          id="3a0d7233-563c-47d3-8453-3129fcf4d896" name="Structure">
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="a99f6712-7bfd-4897-bae1-56e3e1636b25"
+            name="Logical System" abstractType="#ec16b82d-814a-4c05-8c50-96334868c8d6"/>
+        <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
+            id="ec16b82d-814a-4c05-8c50-96334868c8d6" name="Logical System">
+          <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
+              id="b3d74fc4-2faf-4dc0-aa45-4b9c050a2d09" targetElement="#3487935d-7b07-4e19-a39f-495a2af01460"
+              sourceElement="#ec16b82d-814a-4c05-8c50-96334868c8d6"/>
+        </ownedLogicalComponents>
+      </ownedLogicalComponentPkg>
+      <ownedSystemAnalysisRealizations xsi:type="org.polarsys.capella.core.data.la:SystemAnalysisRealization"
+          id="270a046a-236f-4700-832e-10ec94e5a177" targetElement="#3d5552ac-3513-4935-a5d0-b97047361708"
+          sourceElement="#dedf431f-7ad4-4304-971a-6fb73e915fc5"/>
+    </ownedArchitectures>
+    <ownedArchitectures xsi:type="org.polarsys.capella.core.data.pa:PhysicalArchitecture"
+        id="e5547a48-6c4c-42f4-aecc-0d98f2cfee2d" name="Physical Architecture">
+      <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.pa:PhysicalFunctionPkg"
+          id="5a0560e3-4f6e-44d8-81fe-814c174f41b8" name="Physical Functions">
+        <ownedPhysicalFunctions xsi:type="org.polarsys.capella.core.data.pa:PhysicalFunction"
+            id="af18f407-a60a-4c8e-b0fc-0cacc07f6f31" name="Root Physical Function">
+          <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+              id="8725ccc7-86a2-4f0b-8a1d-f140da22dee8" targetElement="#c91aad32-1ac4-490f-a960-1af1f7e7e8ad"
+              sourceElement="#af18f407-a60a-4c8e-b0fc-0cacc07f6f31"/>
+        </ownedPhysicalFunctions>
+      </ownedFunctionPkg>
+      <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.la:CapabilityRealizationPkg"
+          id="065ee454-8cf3-4641-a31e-12806d882a3b" name="Capabilities"/>
+      <ownedInterfacePkg xsi:type="org.polarsys.capella.core.data.cs:InterfacePkg"
+          id="bec24967-cf53-476d-b35c-ea6f4e81afe1" name="Interfaces"/>
+      <ownedDataPkg xsi:type="org.polarsys.capella.core.data.information:DataPkg"
+          id="8c05d5e6-b539-4fad-a431-38163309b0f4" name="Data"/>
+      <ownedPhysicalComponentPkg xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponentPkg"
+          id="d9669c62-5f73-48bf-83d5-f050a1db5afc" name="Structure">
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="d20d1bf2-a2ec-4d7f-a70e-0c657c33bb22"
+            name="Physical System" abstractType="#caba20ad-442e-4a70-a7de-651b8faaf0a0"/>
+        <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+            id="caba20ad-442e-4a70-a7de-651b8faaf0a0" name="Physical System">
+          <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
+              id="9da23d33-35f3-48bd-b2cd-531c103aa82d" targetElement="#ec16b82d-814a-4c05-8c50-96334868c8d6"
+              sourceElement="#caba20ad-442e-4a70-a7de-651b8faaf0a0"/>
+        </ownedPhysicalComponents>
+      </ownedPhysicalComponentPkg>
+      <ownedLogicalArchitectureRealizations xsi:type="org.polarsys.capella.core.data.pa:LogicalArchitectureRealization"
+          id="defd9df3-fa2c-4656-8001-0ebd6ac90282" targetElement="#dedf431f-7ad4-4304-971a-6fb73e915fc5"
+          sourceElement="#e5547a48-6c4c-42f4-aecc-0d98f2cfee2d"/>
+    </ownedArchitectures>
+    <ownedArchitectures xsi:type="org.polarsys.capella.core.data.epbs:EPBSArchitecture"
+        id="66e7b559-e651-4371-9c55-2215d7f276a3" name="EPBS Architecture">
+      <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.la:CapabilityRealizationPkg"
+          id="c58b4c24-6ef8-4406-baf7-54693de4025c" name="Capabilities"/>
+      <ownedConfigurationItemPkg xsi:type="org.polarsys.capella.core.data.epbs:ConfigurationItemPkg"
+          id="12efe832-dea5-4d3d-b643-15d2568ec17c" name="Structure">
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="41a01c49-255a-4f7f-9581-51a5b1163580"
+            name="System" abstractType="#beb0d102-4dd2-4f03-826c-0d57a1ae8921"/>
+        <ownedConfigurationItems xsi:type="org.polarsys.capella.core.data.epbs:ConfigurationItem"
+            id="beb0d102-4dd2-4f03-826c-0d57a1ae8921" name="System" kind="SystemCI">
+          <ownedPhysicalArtifactRealizations xsi:type="org.polarsys.capella.core.data.epbs:PhysicalArtifactRealization"
+              id="7e19612e-3c69-4925-a7b8-71a196d56b2d" targetElement="#caba20ad-442e-4a70-a7de-651b8faaf0a0"
+              sourceElement="#beb0d102-4dd2-4f03-826c-0d57a1ae8921"/>
+        </ownedConfigurationItems>
+      </ownedConfigurationItemPkg>
+      <ownedPhysicalArchitectureRealizations xsi:type="org.polarsys.capella.core.data.epbs:PhysicalArchitectureRealization"
+          id="7af622ff-62ff-437e-8d01-dc63358e875f" targetElement="#e5547a48-6c4c-42f4-aecc-0d98f2cfee2d"
+          sourceElement="#66e7b559-e651-4371-9c55-2215d7f276a3"/>
+    </ownedArchitectures>
+  </ownedModelRoots>
+</org.polarsys.capella.core.data.capellamodeller:Project>
